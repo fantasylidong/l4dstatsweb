@@ -12,6 +12,7 @@
 
 //ini_set('display_errors',1);
 //error_reporting(E_ALL);
+
 error_reporting(0);
 
 
@@ -43,8 +44,6 @@ else {
 			case 5: $lastgamemode = "写实对抗"; break;
 			case 6: $lastgamemode = "突变模式"; break;
 		}
-		$player_ip = $row['ip'];
-		if ($row['ip'] == $fix_local_ip) { $country_record = $geoip->country($fix_local_countryip); } else { $country_record = $geoip->country($row['ip']); }
 		$playername = ($showplayerflags ? "" : "")  . htmlentities($row['name'], ENT_COMPAT, "UTF-8") . "";
 		$line = createtablerowtooltip($row, $i);
 		$line .= "<tr onclick=\"window.location='./ranking/player.php?steamid=" . $row['steamid']."'\" style=\"cursor:pointer\"><td data-title=\"Gamemode:\">" . $lastgamemode . "</td>";

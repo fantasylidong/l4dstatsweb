@@ -9,7 +9,7 @@
  - https://www.primeas.de/
 
 ****************************************************************************/
-
+header("Content-Type: text/html;charset=utf-8");
 require_once("mysql.php");
 include("_config.php");
 include("class_template.php");

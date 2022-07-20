@@ -32,7 +32,7 @@ $site_logo_width = "325"; // Logo Image Width
 
 // COMMUNITY SETTINGS
 $site_steamgroup = "https://steamcommunity.com/groups/fantasyking"; // Steamgroup URL
-$site_welcome = "欢迎又来到东的服务器玩耍~</br>如果有人恶意扰乱游戏体验，请踢出并在https://sb.trygek.com:18443/ 申请给予永ban</br>服务器启用了lilac反作弊系统，自瞄会被封禁，软件连跳会被封禁一个月</br></br>Anne服务器地图在原版基础上做了修改，如果你喜欢原版可以用投票切回哦（地图投票）</br></br>绝境求生24特服务器小僵尸限制为18，，被喷会增加12~15个小僵尸，请尽量别被喷哦，控制特感同时存在上限为8只，只要有枪压力轻轻，友伤改为专家的20%。</br>"; // Welcome Message
+$site_welcome = "欢迎又来到东的服务器玩耍<br>服务器启用了lilac反作弊系统，自瞄会被封禁，软件连跳会被封禁一个月</br><br>自动封禁存在误封的可能，常见于特殊的三方图或者mod，具体啥三方图和mod会引起尚不十分明确，所以请不要用自动封禁的结果辱骂或者阴阳别人，谢谢合作</br>"; // Welcome Message
 $site_welcome_intro = ""; // Welcome Intro Movie URL - Empty for only Welcome Message
 
 // PLUGIN SETTING
