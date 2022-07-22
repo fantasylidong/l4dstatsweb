@@ -25,7 +25,6 @@
 	</head>
 	<body>
 
-<?php $echo = file_get_contents('https://www.xevanio.de/_source/snow.php'); echo $echo; ?>
 
 		<div id="mySidebar" class="sidebar">
 				<div class="mobile_menu"><span class="navbar-brand ml-2"><font color="#fff"><?php if ($site_logo == "") { echo $site_name; } else { echo "<img height=\"$site_logo_height\" width=\"$site_logo_width\" src=\"$site_statsurl$site_logo\" alt=\"Logo\">"; } ?></font></span></div>
