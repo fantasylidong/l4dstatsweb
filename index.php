@@ -1,62 +1,29 @@
 <?php
+/*************************************************************************
+This file is part of SourceBans++
 
-/****************************************************************************
+SourceBans++ (c) 2014-2019 by SourceBans++ Dev Team
 
-   LEFT 4 DEAD (2) PLAYER STATISTICS ©2019-2020 PRIMEAS.DE
-   BASED ON THE PLUGIN FROM MUUKIS MODIFIED BY FOXHOUND FOR SOURCEMOD
+The SourceBans++ Web panel is licensed under a
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
 
- - https://forums.alliedmods.net/showthread.php?p=2678290#post2678290
- - https://www.primeas.de/
+You should have received a copy of the license along with this
+work.  If not, see <http://creativecommons.org/licenses/by-nc-sa/3.0/>.
 
-****************************************************************************/
+This program is based off work covered by the following copyright(s):
+SourceBans 1.4.11
+Copyright © 2007-2014 SourceBans Team - Part of GameConnect
+Licensed under CC-BY-NC-SA 3.0
+Page: <http://www.sourcebans.net/> - <http://www.gameconnect.net/>
+*************************************************************************/
 
-//ini_set('display_errors',1);
-//error_reporting(E_ALL);
+include_once 'init.php';
+include_once(INCLUDES_PATH . "/system-functions.php");
+include_once('config.php');
+include_once(INCLUDES_PATH . "/sb-callback.php");
+$xajax->processRequests();
+session_start();
+include_once(INCLUDES_PATH . "/page-builder.php");
 
-error_reporting(0);
-
-
-require_once("_source/geoip2.phar");
-use GeoIp2\Database\Reader;
-$geoip = new Reader('_source/GeoLite2-Country.mmdb');
-include("_source/common.php");
-$tpl = new Template("" . $templatefiles['index_layout.tpl']);
-setcommontemplatevariables($tpl);
-$result = mysql_query("SELECT * FROM " . $mysql_tableprefix . "players WHERE lastontime >= '" . intval(time() - 300) . "' ORDER BY " . $TOTALPOINTS . " DESC");
-$playercount = number_format(mysql_num_rows($result));
-setcommontemplatevariables($tpl);
-$tpl->set("title", ""); // Window title
-$tpl->set("page_heading", "目前在线玩家? (" . $playercount . ")" );
-if (mysql_error()) { $output = "<p><b>MySQL Error:</b> " . mysql_error() . "</p>"; }
-else {
-	$arr_online = array();
-	$stats = new Template("" . $templatefiles['index_output.tpl']);
-	$i = 1;
-	while ($row = mysql_fetch_array($result)) {
-		if ($row['lastontime'] > time()) $row['lastontime'] = time();
-		$lastgamemode = "Unknown";
-		switch ($row['lastgamemode']) {
-			case 0: $lastgamemode = "战役"; break;
-			case 1: $lastgamemode = "对抗"; break;
-			case 2: $lastgamemode = "写实"; break;
-			case 3: $lastgamemode = "生存"; break;
-			case 4: $lastgamemode = "清道夫"; break;
-			case 5: $lastgamemode = "写实对抗"; break;
-			case 6: $lastgamemode = "突变模式"; break;
-		}
-		$playername = ($showplayerflags ? "" : "")  . htmlentities($row['name'], ENT_COMPAT, "UTF-8") . "";
-		$line = createtablerowtooltip($row, $i);
-		$line .= "<tr onclick=\"window.location='./ranking/player.php?steamid=" . $row['steamid']."'\" style=\"cursor:pointer\"><td data-title=\"Gamemode:\">" . $lastgamemode . "</td>";
-		$line .= "<td data-title=\"Player:\">" . $playername . "</td><td data-title=\"Points:\">" . gettotalpoints($row) . "</td><td data-title=\"Playtime:\">" . gettotalplaytime($row) . "</td></tr>";
-		$arr_online[] = $line;
-		$i++;
-	}
-	if (count($arr_online) == 0) $arr_online[] = "<tr><th colspan=\"5\" class=\"text-center\">当前服务器组无人在线.</th></tr>";
-	$stats->set("online", $arr_online);
-	$output = $stats->fetch("" . $templatefiles['index_output.tpl']);
-}
-
-$tpl->set('body', trim($output));
-echo $tpl->fetch("" . $templatefiles['index_layout.tpl']);
-
-?>
+$route = route(Config::get('config.defaultpage'));
+build($route[0], $route[1]);

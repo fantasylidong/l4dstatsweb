@@ -1,0 +1,60 @@
+"Updater"
+{
+	"Information"
+	{
+		"Version"
+		{
+			"Latest"	"2.0"
+		}
+		
+		"Notes"	"More info @ https:github.com/fantasylidong/CompetitiveWithAnne"
+		"Notes"	"AnneHappy core plugins update"
+	}
+	
+	"Files"
+	{
+		"Patch"
+		{
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_boomer_new.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_boomer_2.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_charger_2.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/AI_HardSI_2.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_hunter_new.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_smoker_new.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_spitter_new.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_jockey_new.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_jockey_2.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_tank_2.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/infected_control.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/text.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/server.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/witch_announce.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/SI_Target_limit.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/l4d_target_override.smx"
+			"Plugin"	"Path_SM/plugins/optional/AnneHappy/l4d2_Anne_stuck_tank_teleport.smx"
+			"Plugin"	"Path_SM/plugins/extend/join.smx"
+			"Plugin"	"Path_SM/plugins/extend/server_name.smx"
+			"Plugin"	"Path_SM/plugins/extend/l4d2_scripted_hud.smx"
+		}
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_boomer_new.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_boomer_2.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_charger_2.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/AI_HardSI_2.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_hunter_new.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_smoker_new.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_spitter_new.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_jockey_new.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_jockey_2.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/ai_tank_2.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/infected_control.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/text.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/server.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/witch_announce.smx"
+    	"Plugin"	"Path_SM/plugins/optional/AnneHappy/SI_Target_limit.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/l4d_target_override.smx"
+		"Plugin"	"Path_SM/plugins/optional/AnneHappy/l4d2_Anne_stuck_tank_teleport.smx"
+		"Plugin"	"Path_SM/plugins/extend/join.smx"
+		"Plugin"	"Path_SM/plugins/extend/server_name.smx"
+		"Plugin"	"Path_SM/plugins/extend/l4d2_scripted_hud.smx"
+	}
+}

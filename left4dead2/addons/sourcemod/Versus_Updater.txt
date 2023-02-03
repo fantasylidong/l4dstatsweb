@@ -1,0 +1,22 @@
+"Updater"
+{
+	"Information"
+	{
+		"Version"
+		{
+			"Latest"	"1.0.7"
+		}
+		
+		"Notes"	"More info @ https://github.com/fantasylidong/neko"
+		"Notes"	"Mark System Update"
+	}
+	
+	"Files"
+	{	
+		"Patch"
+		{
+      		"Plugin"	"Path_SM/plugins/witch_announce.smx"
+		}
+    	"Plugin"	"Path_SM/plugins/witch_announce.smx"
+	}
+}

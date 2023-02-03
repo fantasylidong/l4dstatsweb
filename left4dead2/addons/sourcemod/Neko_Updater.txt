@@ -1,0 +1,39 @@
+"Updater"
+{
+	"Information"
+	{
+		"Version"
+		{
+			"Latest"	"1.0.7"
+		}
+		
+		"Notes"	"More info @ https://github.com/fantasylidong/neko"
+		"Notes"	"Mark System Update"
+	}
+	
+	"Files"
+	{	
+		"Patch"
+		{
+			//"Plugin"	"Path_SM/plugins/NekoSpecials.smx"
+			//"Plugin"	"Path_SM/plugins/ai_boomer_new.smx"
+			//"Plugin"	"Path_SM/plugins/ai_spitter_new.smx"
+			//"Plugin"	"Path_SM/plugins/NekoVote.smx"
+			//"Plugin"	"Path_SM/plugins/NekoServerName.smx"
+			//"Plugin"	"Path_SM/plugins/NekoAdminMenu.smx"
+			//"Plugin"	"Path_SM/plugins/l4d_stats.smx"
+      		"Plugin"	"Path_SM/plugins/witch_announce.smx"
+			"Plugin"	"Path_SM/plugins/duoteserver.smx"
+		}
+		//"Plugin"	"Path_SM/plugins/autoupdate_neko.smx"		
+		//"Plugin"	"Path_SM/plugins/NekoSpecials.smx"
+		//"Plugin"	"Path_SM/plugins/ai_boomer_new.smx"
+		//"Plugin"	"Path_SM/plugins/ai_spitter_new.smx"
+		//"Plugin"	"Path_SM/plugins/NekoVote.smx"
+		//"Plugin"	"Path_SM/plugins/NekoServerName.smx"
+		//"Plugin"	"Path_SM/plugins/NekoAdminMenu.smx"
+		//"Plugin"	"Path_SM/plugins/l4d_stats.smx"
+    	"Plugin"	"Path_SM/plugins/witch_announce.smx"
+		"Plugin"	"Path_SM/plugins/duoteserver.smx"
+	}
+}
