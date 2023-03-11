@@ -32,7 +32,7 @@ $site_logo_width = "325"; // Logo Image Width
 
 // COMMUNITY SETTINGS
 $site_steamgroup = "https://steamcommunity.com/groups/AnneZonemod"; // Steamgroup URL
-$site_welcome = "欢迎又来到东的服务器玩耍<br>服务器启用了lilac反作弊系统，自瞄会被封禁，软件连跳会被封禁一个月</br><br>谢谢所有支持本服务器长久运营的玩家：piguuuuu, 纳村, 血红, TwisttZz, 慕容狗剩, 小月亮，南岸末阴，辅导员レディー ,喵斯同学@提不起劲，小孤独，伤心猫猫，菲，╰樱┛飘散╮，hikari, 缨粟，冲哥，废喵<br>赞助提供一些无伤大雅的小权限，有意向赞助服务器长久运营的请联系服主，谢谢</br><br>资料公开且已经加入steam组的将不会继续显示motd网页<br>自动封禁存在误封的可能，常见于特殊的三方图或者mod，具体啥三方图和mod会引起尚不十分明确，所以请不要用自动封禁的结果辱骂或者阴阳别人，谢谢合作<br>Anne电信服交流新QQ群： 442098812 <br> 写实对抗和战役交流qq群：226723463</br></br>"; // Welcome Message
+$site_welcome = "欢迎又来到东的服务器玩耍<br>服务器启用了lilac反作弊系统，自瞄会被封禁，软件连跳会被封禁一个月</br><br>谢谢所有支持本服务器长久运营的玩家：piguuuuu, 纳村, 血红, TwisttZz, 慕容狗剩, 小月亮，南岸末阴，辅导员レディー ,喵斯同学@提不起劲，小孤独，伤心猫猫，菲，╰樱┛飘散╮，hikari, 缨粟，冲哥，废喵，1864<br>赞助提供一些无伤大雅的小权限，有意向赞助服务器长久运营的请联系服主，谢谢</br><br>资料公开且已经加入steam组的将不会继续显示motd网页<br>自动封禁存在误封的可能，常见于特殊的三方图或者mod，具体啥三方图和mod会引起尚不十分明确，所以请不要用自动封禁的结果辱骂或者阴阳别人，谢谢合作<br>Anne电信服交流新QQ群： 442098812 <br> 写实对抗和战役交流qq群：226723463</br></br>"; // Welcome Message
 $site_welcome_intro = ""; // Welcome Intro Movie URL - Empty for only Welcome Message
 
 // PLUGIN SETTING

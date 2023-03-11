@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-01-28 16:03:07
+<?php /* Smarty version 2.6.31, created on 2023-02-10 11:35:12
          compiled from page_admin_settings_features.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sb_button', 'page_admin_settings_features.tpl', 123, false),)), $this); ?>

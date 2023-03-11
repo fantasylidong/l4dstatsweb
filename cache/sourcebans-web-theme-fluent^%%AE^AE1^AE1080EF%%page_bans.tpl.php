@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-02-03 05:56:03
+<?php /* Smarty version 2.6.31, created on 2023-03-10 21:43:17
          compiled from page_bans.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'htmlspecialchars', 'page_bans.tpl', 36, false),array('modifier', 'count', 'page_bans.tpl', 80, false),array('modifier', 'escape', 'page_bans.tpl', 88, false),array('modifier', 'stripslashes', 'page_bans.tpl', 88, false),)), $this); ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-02-03 03:58:06
+<?php /* Smarty version 2.6.31, created on 2023-03-09 18:18:33
          compiled from page_protestban.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sb_button', 'page_protestban.tpl', 74, false),)), $this); ?>

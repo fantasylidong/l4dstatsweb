@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-01-28 16:03:07
+<?php /* Smarty version 2.6.31, created on 2023-02-10 11:35:12
          compiled from box_admin_log_search.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sb_button', 'box_admin_log_search.tpl', 54, false),)), $this); ?>

@@ -45,7 +45,7 @@
 					<a href="<?php echo $site_statsurl;?>ranking/index.php?type=realismversus"><i class="fa fa-angle-right"></i> 写实对抗</a>
 					<a href="<?php echo $site_statsurl;?>ranking/index.php?type=mutations"><i class="fa fa-angle-right"></i> 突变模式</a>
 				</div>
-				<button class="dropdown-btn"><i class="fa fa-gamepad"></i> 地图完成排名
+				<button class="dropdown-btn"><i class="fa fa-gamepad"></i> Anne地图完成时间排名
 					<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">

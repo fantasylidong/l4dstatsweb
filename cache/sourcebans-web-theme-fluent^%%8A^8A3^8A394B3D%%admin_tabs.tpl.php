@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-01-28 16:03:07
+<?php /* Smarty version 2.6.31, created on 2023-02-10 11:35:12
          compiled from core/admin_tabs.tpl */ ?>
 <div class="flex m:flex-fd:column">
     <div class="admin_tab layout_box padding">

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-02-03 06:56:09
+<?php /* Smarty version 2.6.31, created on 2023-03-11 12:53:52
          compiled from page_servers.tpl */ ?>
 <div class="layout_box">
     <div class="table padding">

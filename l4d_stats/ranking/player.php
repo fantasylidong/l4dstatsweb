@@ -83,7 +83,7 @@ if (mysql_num_rows($result) > 0) {
 	$stats->set("player_timedmaps", $times . "");
 	if (function_exists(bcadd)) $stats->set("player_url", getfriendid($row['steamid']) );
 	else $stats->set("player_url", "<b>ERROR</b>");
-	$stats->set("player_lastonline", date($lastonlineformat, $row['lastontime'] + ($dbtimemod * 3600)) . " (" . formatage(time() - $row['lastontime'] + ($dbtimemod * 3600)) . " ago)");
+	$stats->set("player_lastonline", date($lastonlineformat, $row['lastontime'] + ($dbtimemod * 3600)) . " (" . formatage(time() - $row['lastontime'] + ($dbtimemod * 3600)) . " 前)");
 	$stats->set("player_playtime", gettotalplaytime($row));
 	if ($game_version != 1){
 		$stats->set("player_playtime_realism", "&nbsp;&nbsp;Realism: " . getplaytime($row['playtime_realism']) . "<br>&nbsp;&nbsp;Mutations: " . getplaytime($row['playtime_mutations']) . "<br>");

@@ -62,39 +62,39 @@ if ($type == "coop" || $type == "versus" || $type == "realism" || $type == "surv
 		if (strlen($prefix) > 0) $query .= " WHERE LOWER(name) like '" . strtolower($prefix) . "%' and custom = 0";
 		else $query .= " WHERE custom = 1 AND playtime_nor + playtime_adv + playtime_exp > 0";
 		$query .= $query_where;
-			$result = mysql_query($query) or die(mysql_error());
-			if (mysql_num_rows($result) <= 0) continue;
-			$playtime = 0;
-			$points = 0;
-			$points_infected = 0;
-			$kills = 0;
-			$kill_survivor = 0;
-			$restarts = 0;
-			$infected_win = 0;
-			while ($row = mysql_fetch_array($result)) {
-				$playtime += $row['playtime'];
-				$points += $row['points'];
-				$kills += $row['kills'];
-				if ($type == "coop" || $type == "realism" || $type == "survival" || $type == "mutations")
-					$restarts += $row['restarts'];
-				else if ($type == "versus" || $type == "scavenge" || $type == "realismversus") {
-					$points_infected += $row['points_infected'];
-					$kill_survivor += $row['kill_survivor'];
-					$infected_win += $row['infected_win'];
-				}
-			}
-			$totals['playtime'] += $playtime;
-			$totals['points'] += $points;
-			$totals['kills'] += $kills;
+		$result = mysql_query($query) or die(mysql_error());
+		if (mysql_num_rows($result) <= 0) continue;
+		$playtime = 0;
+		$points = 0;
+		$points_infected = 0;
+		$kills = 0;
+		$kill_survivor = 0;
+		$restarts = 0;
+		$infected_win = 0;
+		while ($row = mysql_fetch_array($result)) {
+			$playtime += $row['playtime'];
+			$points += $row['points'];
+			$kills += $row['kills'];
 			if ($type == "coop" || $type == "realism" || $type == "survival" || $type == "mutations")
-				$totals['restarts'] += $restarts;
+				$restarts += $row['restarts'];
 			else if ($type == "versus" || $type == "scavenge" || $type == "realismversus") {
-				$totals['points_infected'] += $points_infected;
-				$totals['kill_survivor'] += $kill_survivor;
-				$totals['infected_win'] += $infected_win;
+				$points_infected += $row['points_infected'];
+				$kill_survivor += $row['kill_survivor'];
+				$infected_win += $row['infected_win'];
 			}
-			$maparr[] = $line . "<tr><td data-title=\"地图:\">" . $title . "</td><td data-title=\"游玩时长:\">" . formatage($playtime * 60) . "</td>" . (($type == "versus" || $type == "scavenge" || $type == "realismversus") ? "<td data-title=\"输掉回合数:\">" . number_format($infected_win) . "</td><td data-title=\"当感染者分数:\">" . number_format($points_infected) . "</td>" : "") . "<td data-title=\"当生还者分数:\">" . number_format($points) . (($type == "versus" || $type == "scavenge" || $type == "realismversus") ? "" : " (" . number_format(getppm($points, $playtime), 2) . ")") . "</td><td data-title=\"消灭的感染者:\">" . number_format($kills) . "</td>" . (($type == "versus" || $type == "scavenge" || $type == "realismversus") ? "<td data-title=\"消灭的生还者:\">" . number_format($kill_survivor) . "</td>" : "") . (($type == "coop" || $type == "realism" || $type == "survival" || $type == "mutations") ? "<td data-title=\"重启次数:\">" . number_format($restarts) . "</td>" : "") . "</tr>";
-			$i++;
+		}
+		$totals['playtime'] += $playtime;
+		$totals['points'] += $points;
+		$totals['kills'] += $kills;
+		if ($type == "coop" || $type == "realism" || $type == "survival" || $type == "mutations")
+			$totals['restarts'] += $restarts;
+		else if ($type == "versus" || $type == "scavenge" || $type == "realismversus") {
+			$totals['points_infected'] += $points_infected;
+			$totals['kill_survivor'] += $kill_survivor;
+			$totals['infected_win'] += $infected_win;
+		}
+		$maparr[] = $line . "<tr><td data-title=\"地图:\">" . $title . "</td><td data-title=\"游玩时长:\">" . formatage($playtime * 60) . "</td>" . (($type == "versus" || $type == "scavenge" || $type == "realismversus") ? "<td data-title=\"输掉回合数:\">" . number_format($infected_win) . "</td><td data-title=\"当感染者分数:\">" . number_format($points_infected) . "</td>" : "") . "<td data-title=\"当生还者分数:\">" . number_format($points) . (($type == "versus" || $type == "scavenge" || $type == "realismversus") ? "" : " (" . number_format(getppm($points, $playtime), 2) . ")") . "</td><td data-title=\"消灭的感染者:\">" . number_format($kills) . "</td>" . (($type == "versus" || $type == "scavenge" || $type == "realismversus") ? "<td data-title=\"消灭的生还者:\">" . number_format($kill_survivor) . "</td>" : "") . (($type == "coop" || $type == "realism" || $type == "survival" || $type == "mutations") ? "<td data-title=\"重启次数:\">" . number_format($restarts) . "</td>" : "") . "</tr>";
+		$i++;
 	}
 	$arr_achievements = array();
 	if ($totals['kills'] > $population_minkills) {

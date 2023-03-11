@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-01-30 08:10:10
+<?php /* Smarty version 2.6.31, created on 2023-03-10 08:15:55
          compiled from page_login.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sb_button', 'page_login.tpl', 46, false),)), $this); ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-01-28 16:02:41
+<?php /* Smarty version 2.6.31, created on 2023-02-10 11:34:46
          compiled from page_admin.tpl */ ?>
 <div class="admin_nav">
     <ul class="flex">

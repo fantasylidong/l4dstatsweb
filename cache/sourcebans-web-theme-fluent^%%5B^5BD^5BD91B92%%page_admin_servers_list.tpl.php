@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2023-01-24 12:19:11
+<?php /* Smarty version 2.6.31, created on 2023-02-10 11:32:14
          compiled from page_admin_servers_list.tpl */ ?>
 <div class="layout_box flex:11 admin_tab_content tabcontent" id="List servers" style="display: block;">
     <?php if (! $this->_tpl_vars['permission_list']): ?>

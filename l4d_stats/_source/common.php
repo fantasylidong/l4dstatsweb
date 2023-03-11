@@ -57,7 +57,7 @@ function getfriendid($pszAuthID)
 }
 
 function formatage($date) {
-	$nametable = array(" Seconds", " Minutes", " Hours", " Days", " Weeks", " Months", " Years");
+	$nametable = array(" 秒", " 分钟", " 小时", " 天", " 周", " 月", " 年");
 	$agetable = array("60", "60", "24", "7", "4", "12", "10");
 	$ndx = 0;
 	while ($date > $agetable[$ndx]) {
@@ -126,7 +126,7 @@ function gettotalplaytime($row)
 
 function getplaytime($minutes)
 {
-	return formatage($minutes * 60) . " (" . number_format($minutes) . " min)";
+	return formatage($minutes * 60) . " (" . number_format($minutes) . " 分钟)";
 }
 
 function getppm($__points, $__playtime)
@@ -362,6 +362,7 @@ else if ($game_version == 2)
 					   "c11m" => "Dead Air",
 					   "c12m" => "Blood Harvest",
 					   "c13m" => "Cold Stream",
+					   "c14m" => "The Last Stand",
 					   "" => "Custom Maps");
 
 	$versus_campaigns = array("c1m" => "Dead Center",
@@ -377,6 +378,7 @@ else if ($game_version == 2)
 					   "c11m" => "Dead Air",
 					   "c12m" => "Blood Harvest",
 					   "c13m" => "Cold Stream",
+					   "c14m" => "The Last Stand",
 					   "" => "Custom Maps");
 
 	$survival_campaigns = array("c1m" => "Dead Center",
@@ -392,6 +394,7 @@ else if ($game_version == 2)
 					   "c11m" => "Dead Air",
 					   "c12m" => "Blood Harvest",
 					   "c13m" => "Cold Stream",
+					   "c14m" => "The Last Stand",
 					   "" => "Custom Maps");
 
 	$scavenge_campaigns = array("c1m" => "Dead Center",
@@ -407,6 +410,7 @@ else if ($game_version == 2)
 					   "c11m" => "Dead Air",
 					   "c12m" => "Blood Harvest",
 					   "c13m" => "Cold Stream",
+					   "c14m" => "The Last Stand",
 					   "" => "Custom Maps");
 
 	$realism_campaigns = array("c1m" => "Dead Center",
@@ -422,6 +426,7 @@ else if ($game_version == 2)
 					   "c11m" => "Dead Air",
 					   "c12m" => "Blood Harvest",
 					   "c13m" => "Cold Stream",
+					   "c14m" => "The Last Stand",
 					   "" => "Custom Maps");
 
 	$realismversus_campaigns = array("c1m" => "Dead Center",
@@ -437,6 +442,7 @@ else if ($game_version == 2)
 					   "c11m" => "Dead Air",
 					   "c12m" => "Blood Harvest",
 					   "c13m" => "Cold Stream",
+					   "c14m" => "The Last Stand",
 					   "" => "Custom Maps");
 
 	$mutations_campaigns = array("c1m" => "Dead Center",
@@ -452,6 +458,7 @@ else if ($game_version == 2)
 					   "c11m" => "Dead Air",
 					   "c12m" => "Blood Harvest",
 					   "c13m" => "Cold Stream",
+					   "c14m" => "The Last Stand",
 					   "" => "Custom Maps");
 }
 else
@@ -474,6 +481,7 @@ else
 					   "c11m" => "Dead Air (L4D2)",
 					   "c12m" => "Blood Harvest (L4D2)",
 					   "c13m" => "Cold Stream (L4D2)",
+					   "c14m" => "The Last Stand (L4D2)",
 					   "" => "Custom Maps");
 
 	$versus_campaigns = array("l4d_vs_hospital" => "No Mercy (L4D1)",
@@ -494,6 +502,7 @@ else
 					   "c11m" => "Dead Air (L4D2)",
 					   "c12m" => "Blood Harvest (L4D2)",
 					   "c13m" => "Cold Stream (L4D2)",
+					   "c14m" => "The Last Stand (L4D2)",
 					   "" => "Custom Maps");
 
 	$survival_campaigns = array("l4d_sv_lighthouse" => "Lighthouse (L4D1)",
@@ -519,6 +528,7 @@ else
 					   "c11m" => "Dead Air (L4D2)",
 					   "c12m" => "Blood Harvest (L4D2)",
 					   "c13m" => "Cold Stream (L4D2)",
+					   "c14m" => "The Last Stand (L4D2)",
 					   "" => "Custom Maps");
 
 	$scavenge_campaigns = array("c1m" => "Dead Center (L4D2)",
@@ -534,6 +544,7 @@ else
 					   "c11m" => "Dead Air (L4D2)",
 					   "c12m" => "Blood Harvest (L4D2)",
 					   "c13m" => "Cold Stream (L4D2)",
+					   "c14m" => "The Last Stand (L4D2)",
 					   "" => "Custom Maps (L4D2)");
 
 	$realism_campaigns = array("c1m" => "Dead Center (L4D2)",
@@ -549,6 +560,7 @@ else
 					   "c11m" => "Dead Air (L4D2)",
 					   "c12m" => "Blood Harvest (L4D2)",
 					   "c13m" => "Cold Stream (L4D2)",
+					   "c14m" => "The Last Stand (L4D2)",
 					   "" => "Custom Maps (L4D2)");
 
 	$realismversus_campaigns = array("c1m" => "Dead Center (L4D2)",
@@ -564,6 +576,7 @@ else
 					   "c11m" => "Dead Air (L4D2)",
 					   "c12m" => "Blood Harvest (L4D2)",
 					   "c13m" => "Cold Stream (L4D2)",
+					   "c14m" => "The Last Stand (L4D2)",
 					   "" => "Custom Maps (L4D2)");
 
 	$mutations_campaigns = array("c1m" => "Dead Center (L4D2)",
@@ -579,6 +592,7 @@ else
 					   "c11m" => "Dead Air (L4D2)",
 					   "c12m" => "Blood Harvest (L4D2)",
 					   "c13m" => "Cold Stream (L4D2)",
+					   "c14m" => "The Last Stand (L4D2)",
 					   "" => "Custom Maps (L4D2)");
 }
 
