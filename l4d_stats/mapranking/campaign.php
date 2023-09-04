@@ -34,6 +34,8 @@ if (strstr($_GET['usebuy'], "/")) exit;
 $usebuy = intval($_GET['usebuy']);
 if (strstr($_GET['auto'], "/")) exit;
 $auto = intval($_GET['auto']);
+if (strstr($_GET['finishplayernum'], "/")) exit;
+$finishplayernum = intval($_GET['finishplayernum']);
 if ($type == "anne" || $type == "witchparty" || $type == "allcharger" || $type == "alone" || $type == "hunters") {
     $typelabel = "";
     if ($type == "anne") $typelabel = "(普通药役)";
@@ -84,6 +86,7 @@ if ($type == "anne" || $type == "witchparty" || $type == "allcharger" || $type =
 				AND timedmaps.sitime = '{$sitime}'
 				AND timedmaps.usebuy = '{$usebuy}'
 				AND timedmaps.auto = '{$auto}'
+                AND timedmaps.players = '{$finishplayernum}'
 				AND LOWER(timedmaps.map) LIKE LOWER('{$campaign}{$i}%%')
 				AND timedmaps.mode = '{$mode}'
                 GROUP BY timedmaps.time, timedmaps.map

@@ -40,17 +40,19 @@ if ($type == "anne" || $type == "witchparty" || $type == "allcharger" || $type =
         $sitime = $_POST['sitime'];
         $auto = $_POST['auto'];
         $usebuy = $_POST['usebuy'];
+		$finishplayernum = $_POST['finishplayernum'];
 	}else{
 		$anneversion = "2023-01";
 		$sinum = 6;
 		$sitime = 16;
 		$usebuy = 0;
 		$auto = 1;
+		$finishplayernum = 4;
 	}
 	if ($type == "anne"){ $campaigns = $coop_campaigns; $mode = 1; }
 	else if ($type == "witchparty") { $campaigns = $coop_campaigns; $mode = 2; }
-	else if ($type == "allcharger") { $campaigns = $coop_campaigns; $mode = 3; }
-	else if ($type == "alone") { $campaigns = $coop_campaigns; $mode = 4; }
+	else if ($type == "allcharger") { $campaigns = $coop_campaigns; $mode = 3;}
+	else if ($type == "alone") { $campaigns = $coop_campaigns; $mode = 4;}
 	else if ($type == "hunters") { $campaigns = $coop_campaigns; $mode = 5; }
 	foreach ($campaigns as $prefix => $title) {
         if($prefix =="")continue;
@@ -70,6 +72,7 @@ if ($type == "anne" || $type == "witchparty" || $type == "allcharger" || $type =
 				AND timedmaps.sitime = '{$sitime}'
 				AND timedmaps.usebuy = '{$usebuy}'
 				AND timedmaps.auto = '{$auto}'
+				AND timedmaps.players = '{$finishplayernum}'
 				AND LOWER(timedmaps.map) LIKE LOWER('{$prefix}{$i}%')
 				AND timedmaps.mode = '{$mode}'
                 AND timedmaps.time = (

@@ -72,6 +72,18 @@
 				?>
 			</select>
 
+			<label for="finishplayernum">完成人数:</label>
+			<select name="finishplayernum" id="finishplayernum">
+				<?php
+    $query = "SELECT DISTINCT players FROM l4d2stats.timedmaps";
+    $result = mysql_query($query);
+    while ($row = mysql_fetch_assoc($result)) {
+      $optionValue = $row['players'];
+      echo '<option value="' . $optionValue . '">' . $optionValue . '</option>';
+				}
+				?>
+			</select>
+
 			<input type="submit" name="submit" value="提交">
 		</form>
 		<!-- JavaScript 代码 -->
