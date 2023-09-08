@@ -72,7 +72,6 @@ if ($type == "anne" || $type == "witchparty" || $type == "allcharger" || $type =
 				AND timedmaps.sitime = '{$sitime}'
 				AND timedmaps.usebuy = '{$usebuy}'
 				AND timedmaps.auto = '{$auto}'
-				AND timedmaps.players = '{$finishplayernum}'
 				AND LOWER(timedmaps.map) LIKE LOWER('{$prefix}{$i}%')
 				AND timedmaps.mode = '{$mode}'
                 AND timedmaps.time = (
@@ -86,6 +85,7 @@ if ($type == "anne" || $type == "witchparty" || $type == "allcharger" || $type =
                 AND timedmaps.sitime = '{$sitime}'
                 AND timedmaps.usebuy = '{$usebuy}'
                 AND timedmaps.auto = '{$auto}'
+				AND timedmaps.players = '{$finishplayernum}'
                 AND LOWER(timedmaps.map) LIKE LOWER('{$prefix}{$i}%')
                 AND timedmaps.mode = '{$mode}'
                 ORDER BY time ASC
@@ -128,7 +128,7 @@ if ($type == "anne" || $type == "witchparty" || $type == "allcharger" || $type =
 		$stats->set("maps", $maparr);
 		$body = $stats->fetch("" . $templatefiles["campaigns_page_coop.tpl"]);
 		$stats->set("page_body", $body);
-		$stats->set("page_link", "<a class=\"alink-link2\" href=\"campaign.php?id=" . $prefix . "&type=" . $type . "&anneversion=" . $anneversion  . "&sinum=" . $sinum . "&sitime=" . $sitime . "&usebuy=" . $usebuy . "&auto=" . $auto . "\">查看完整数据</a>");
+		$stats->set("page_link", "<a class=\"alink-link2\" href=\"campaign.php?id=" . $prefix . "&type=" . $type . "&anneversion=" . $anneversion  . "&sinum=" . $sinum . "&sitime=" . $sitime . "&usebuy=" . $usebuy . "&auto=" . $auto . "&finishplayernum=" . $finishplayernum . "\">查看完整数据</a>");
 		$output .= $stats->fetch("" . $templatefiles['campaigns_page.tpl']);
 	}
 }
